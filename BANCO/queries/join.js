@@ -26,3 +26,13 @@
   }).catch(err=>{
      console.log(err);
   });
+
+  /*
+   No codigo abaixo alem de usar o join eu ainda coloco uma condição 
+  */
+   knex.select(["games.*","estudios.nome as estudio_nome"])
+   .table("games")
+   .innerJoin("estudios","estudios.game_id","games.id")
+   .where("games.id",5)
+   .then(data=>{console.log(data)})
+   .catch(err=>{console.log(err)});
