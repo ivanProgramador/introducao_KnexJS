@@ -1,11 +1,10 @@
 
 /*
-   Relacionamento de um para muitos 
-   Nesse caso eu vou tratar um jogo que tem varios estudios
-   eu preciso retornar o jogos e soa estudios aos quais ele pertence
-   só que nesse caso o knex traz todos os dados seu eu quiser os dados
-   de um jeito especifico eu tenho que tratar
-   */
+   Relacionamento de um para muitos.
+     Nesse caso eu vou tratar um jogo que tem varios estudios, eu preciso retornar o jogo e sua e lista de estúdios.
+
+     só que nesse caso o knex traz todos os dados se eu quiser os dados de um jeito especifico eu tenho que tratar.
+*/
 
 
 knex.select(["games.*","estudios.nome as estudio_nome"])
